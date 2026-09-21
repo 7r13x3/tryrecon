@@ -1,0 +1,51 @@
+# ═══════════════════════════════════════════════════════════
+#  TryRecon v1.0 — Configuration
+# ═══════════════════════════════════════════════════════════
+#  All modules use FREE APIs. API keys below are OPTIONAL.
+# ═══════════════════════════════════════════════════════════
+
+[scan]
+timeout = 5
+concurrency = 100
+user_agent = "TryRecon/1.0 (OSINT; +https://github.com/7r13x3/tryrecon)"
+
+[subdomains]
+use_crtsh        = true
+use_hackertarget = true
+use_cyberatlas   = true
+use_bruteforce   = true
+wordlist         = "wordlists/subdomains.txt"
+
+[ports]
+top_ports       = 1000
+use_internetdb  = true
+banner_timeout  = 3
+
+[tech]
+follow_redirects = true
+max_redirects    = 5
+
+[favicon]
+enabled    = true
+censys_key = ""
+fofa_key   = ""
+
+[emails]
+scrape_site   = true
+tomba_key     = ""
+verify_smtp   = true
+pattern_infer = true
+
+[breach]
+use_xposedornot = true
+use_leaklookup  = false
+
+# ─── Phone Number OSINT ────────────────────────────────────
+[phone]
+# Offline analysis (no key, unlimited, works always)
+use_libphonenumber = true     # Google's libphonenumber — free, offline
+default_region     = "US"     # fallback region for national numbers
+
+# Optional online enrichment
+numverify_key = ""            # optional: 100 lookups/month free
+veriphone_key = ""            # optional: 1000 lookups/month free
