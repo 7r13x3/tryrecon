@@ -143,5 +143,3 @@ python -m tryrecon.cli report --db recon.db --out report.html
 
 # Validate config
 python -m tryrecon.cli check --config configs/example.toml
-License
-MIT
